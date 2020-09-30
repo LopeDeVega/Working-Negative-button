@@ -1,4 +1,3 @@
-C:\Users\senti\source\repos\Course C#\23.Calculadora\1.WPF.Intefaz\obj\Debug\1.WPF.Intefaz.csprojAssemblyReference.cache
 C:\Users\senti\source\repos\Course C#\23.Calculadora\1.WPF.Intefaz\obj\Debug\App.g.cs
 C:\Users\senti\source\repos\Course C#\23.Calculadora\1.WPF.Intefaz\obj\Debug\1.WPF.Intefaz_MarkupCompile.cache
 C:\Users\senti\source\repos\Course C#\23.Calculadora\1.WPF.Intefaz\bin\Debug\1.WPF.Intefaz.exe.config
@@ -13,3 +12,4 @@ C:\Users\senti\source\repos\Course C#\23.Calculadora\1.WPF.Intefaz\obj\Debug\1.W
 C:\Users\senti\source\repos\Course C#\23.Calculadora\1.WPF.Intefaz\obj\Debug\1.WPF.Intefaz.csproj.CoreCompileInputs.cache
 C:\Users\senti\source\repos\Course C#\23.Calculadora\1.WPF.Intefaz\obj\Debug\1.WPF.Intefaz.exe
 C:\Users\senti\source\repos\Course C#\23.Calculadora\1.WPF.Intefaz\obj\Debug\1.WPF.Intefaz.pdb
+C:\Users\senti\source\repos\Course C#\23.Calculadora\1.WPF.Intefaz\obj\Debug\1.WPF.Intefaz.csprojAssemblyReference.cache
