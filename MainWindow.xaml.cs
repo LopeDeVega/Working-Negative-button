@@ -28,6 +28,8 @@ namespace _1.WPF.Intefaz
 
             //Hello GitHup
             txtBox.IsReadOnly = true;
+            
+            console.WirteLine("Hola Antonio");
 
         }
 
