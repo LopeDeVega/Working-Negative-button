@@ -26,6 +26,7 @@ namespace _1.WPF.Intefaz
         {
             InitializeComponent();
 
+            //Hello GitHup
             txtBox.IsReadOnly = true;
 
         }
