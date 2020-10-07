@@ -26,27 +26,55 @@ namespace _1.WPF.Intefaz
         {
             InitializeComponent();
 
-            //Hello GitHup
             txtBox.IsReadOnly = true;
-            
-            console.WirteLine("Hola Antonio");
 
         }
 
-        //---------------------------------------------- B_1 ---------------------------------------------------//
+        //----------------------------------------------------- B_0 ---------------------------------------------------//
+
+
+        private void Button_Click_Cero(object sender, RoutedEventArgs e)
+        {
+            //if symbol is empty add the number to List num_1
+            if (symbol == "")
+            {
+                txtBox.Text = txtBox.Text + 0;
+                num_1.Add(double.Parse(txtBox.Text));
+
+            }
+
+            //else clear the textbox and add the number to List num_2
+            else
+            {
+               // txtBox.Clear();
+                txtBox.Text = txtBox.Text + 0;
+                num_2.Add(double.Parse(txtBox.Text));
+
+
+
+            }
+        }
+
+        //----------------------------------------------------- B_1 ---------------------------------------------------//
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //If symbol is empty take number 1
+            //if symbol is empty add the number to List num_1
             if (symbol == "")
             {
                 txtBox.Text = txtBox.Text + 1;
+                num_1.Add(double.Parse(txtBox.Text));
+
             }
 
-            //If Symbol is not empty take number 2
-            else
-            {
-               txtBox.Text = txtBox.Text + 1;
+            //else clear the textbox and add the number to List num_2
 
+            else
+
+            {
+              
+                    txtBox.Text = txtBox.Text + 1;
+                    num_2.Add(double.Parse(txtBox.Text));
+                
             }
            
 
@@ -54,26 +82,194 @@ namespace _1.WPF.Intefaz
         }
 
 
-        //---------------------------------------------- B_2 ---------------------------------------------------//
+        //------------------------------------------------------- B_2 ---------------------------------------------------//
 
         private void Btn2_Click(object sender, RoutedEventArgs e)
+        {
+            
+            //if symbol is empty add the number to List num_1
+            if (symbol == "")
+            {
+
+                txtBox.Text = txtBox.Text + 2;
+                num_1.Add(double.Parse(txtBox.Text));
+
+
+            }
+                        
+            //else clear the textbox and add the number to List num_2
+            else
+            {
+                txtBox.Clear();
+                txtBox.Text = txtBox.Text + 2;
+                num_2.Add(double.Parse(txtBox.Text));
+
+
+            }
+
+        }
+        //------------------------------------------------------- B_3 ---------------------------------------------------//
+
+        private void Btn3_Click(object sender, RoutedEventArgs e)
         {
 
             if (symbol == "")
             {
 
-                txtBox.Text = txtBox.Text + 2;
+                txtBox.Text = txtBox.Text + 3;
+                num_1.Add(double.Parse(txtBox.Text));
+            }
+            else
+            {
+                
+                txtBox.Text = txtBox.Text + 3;
+                num_2.Add(double.Parse(txtBox.Text));
+
+
+            }
+        }
+
+        //------------------------------------------------------- B_4 ---------------------------------------------------//
+
+        private void Btn4_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (symbol == "")
+            {
+
+                txtBox.Text = txtBox.Text + 4;
+                num_1.Add(double.Parse(txtBox.Text));
+
+
 
             }
             else
             {
-                txtBox.Text = txtBox.Text + 2;
+                txtBox.Text = txtBox.Text + 4;
+                num_2.Add(double.Parse(txtBox.Text));
+
 
             }
 
         }
 
-        //----------------Button_Clean_1----------------------- B_Clean (C) ------------------------------------//
+        //------------------------------------------------------- B_5 ---------------------------------------------------//
+
+        private void Btn5_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            if (symbol == "")
+            {
+
+                txtBox.Text = txtBox.Text + 5;
+                num_1.Add(double.Parse(txtBox.Text));
+
+            }
+            else
+            {
+                txtBox.Text = txtBox.Text + 5;
+                num_2.Add(double.Parse(txtBox.Text));
+
+
+            }
+        }
+
+        //------------------------------------------------------- B_6 ---------------------------------------------------//
+
+        private void Btn6_Click(object sender, RoutedEventArgs e)
+        {
+            
+
+            if (symbol == "")
+            {
+
+                txtBox.Text = txtBox.Text + 6;
+                num_1.Add(double.Parse(txtBox.Text));
+
+            }
+            else
+            {
+               
+                
+                txtBox.Text = txtBox.Text + 6;
+                num_2.Add(double.Parse(txtBox.Text));
+
+            }
+
+        }
+
+        //------------------------------------------------------- B_7 ---------------------------------------------------//
+
+        private void Btn7_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (symbol == "")
+            {
+
+                txtBox.Text = txtBox.Text + 7;
+                num_1.Add(double.Parse(txtBox.Text));
+
+
+            }
+            else
+            {
+                txtBox.Text = txtBox.Text + 7;
+                num_2.Add(double.Parse(txtBox.Text));
+
+
+            }
+
+        }
+
+        //------------------------------------------------------- B_8 ---------------------------------------------------//
+
+
+        private void Btn8_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (symbol == "")
+            {
+
+                txtBox.Text = txtBox.Text + 8;
+                num_1.Add(double.Parse(txtBox.Text));
+
+
+            }
+            else
+            {
+                txtBox.Text = txtBox.Text + 8;
+                num_2.Add(double.Parse(txtBox.Text));
+
+
+            }
+        }
+
+        //------------------------------------------------------- B_9 ---------------------------------------------------//
+
+
+        private void Btn9_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (symbol == "")
+            {
+
+                txtBox.Text = txtBox.Text + 9;
+                num_1.Add(double.Parse(txtBox.Text));
+
+
+            }
+            else
+            {
+                txtBox.Text = txtBox.Text + 9;
+                num_2.Add(double.Parse(txtBox.Text));
+
+            }
+        }
+
+      
+
+        //-------------------------------------------------------------- B_Clean (C) ------------------------------------//
         private void Button_Clean_1(object sender, RoutedEventArgs e)
         {
            // Console.WriteLine("Has presionado C " );
@@ -82,104 +278,232 @@ namespace _1.WPF.Intefaz
             txtBox.Clear();
 
             //Clean List
-            numf_1.Clear();
-            numf_2.Clear();
+            num_1.Clear();
+            num_2.Clear();
             
             //Set the values at Cero (0)
             ResultF = 0;
             symbol = "";
             contador = 0;
 
-
         }
+        //------------------------------------------------------------- B_Clean (CE) ------------------------------------//
 
-
-        //------------------------------------------------ Add (+)--------------------------------//
-        private void Button_Click_Add(object sender, RoutedEventArgs e)
+        private void Button_Click_CE(object sender, RoutedEventArgs e)
         {
 
-            //Add number one to de List(numf_1) 
-            numf_1.Add(float.Parse(txtBox.Text));
+            //Remove the last number inserted into the List num_2
+            num_2.RemoveAt(num_2.Count - 1);
 
-            //TextBox get the value +
-            txtBox.Text = "+";
-           
-            //symbol is = +
-            symbol = txtBox.Text;
-            //Clean Textbox
             txtBox.Clear();
 
+        }
 
-            //used to make correct calculation when you subtract and then press subtract 
-            if (contador > 1)
+        //---------------------------------------------------------------- B_Point (.) ------------------------------------//
+        private void Button_Click_Point(object sender, RoutedEventArgs e)
+        {
+
+            txtBox.Text = txtBox.Text + ".";
+        }
+
+        //---------------------------------------------------------------- B_Negative (+) ------------------------------------//
+
+        private void Button_Click_Negative(object sender, RoutedEventArgs e)
+        {
+
+            //When not number / turn the number in a negative value
+            if (txtBox.Text == "")
             {
-                numf_2.Clear();
+
+                txtBox.Text = "-";
+               
+
+            }
+            //When a number value is already inserted
+
+
+
+            if (txtBox.Text != "-" && symbol == "")
+            {
+                //Last number of list num_1 is multiplied for (-1) converting the value in a negative number
+                num_1[num_1.Count - 1] = num_1[num_1.Count - 1] * (-1);
+                txtBox.Text = num_1[num_1.Count - 1].ToString();
+
+            }
+            if (txtBox.Text != "" && symbol != "")
+            {
+
+
+
+                //Last number of list num_2 is multiplied for (-1) converting the value in a negative number
+                num_2[num_2.Count - 1] = num_2[num_2.Count - 1] * (-1);
+                txtBox.Text = num_2[num_2.Count - 1].ToString();
+
             }
 
+            if (ResultF != 0)
+            {
 
+                txtBox.Text = (ResultF * -1).ToString();
+                ResultF = double.Parse(txtBox.Text);
+                Console.WriteLine("Reultado conseguido");
+                Console.WriteLine(ResultF);
+            }
 
         }
-        //------------------------------------------------ Subtract (-) --------------------------------//
+
+
+        //----------------------------------------------------- Add (+)--------------------------------//
+        private void Button_Click_Add(object sender, RoutedEventArgs e)
+        {
+            //if which prevent to break the app if + symbol is pressed before any number inserted
+            if (symbol == "+" )
+            {
+                //it shows the last number inserted into the List num_2
+                txtBox.Text = num_2[num_2.Count - 1].ToString();
+               
+
+            }
+            //when symbol is empty add the symbol 
+            else
+            {
+                //Add number one to de List(num_1) 
+                //num_1.Add(double.Parse(txtBox.Text));
+
+                //TextBox get the value +
+                //txtBox.Text = "+";
+
+                //symbol is = +
+                symbol = "+";
+              
+
+
+                //used to make correct calculation when you subtract and then press subtract 
+                if (contador > 1)
+                {
+                    num_2.Clear();
+                }
+
+            }
+            txtBox.Clear();
+
+        }
+        //------------------------------------------------ ---Subtract (-) --------------------------------//
 
         private void Button_Click_Subtract(object sender, RoutedEventArgs e)
         {
+            if (symbol == "-")
+            {
 
-            //Add number one to de List(numf_1) 
-            numf_1.Add(float.Parse(txtBox.Text));
-           
-            txtBox.Text = "-";
+                //it shows the last number inserted into the List num_2
+                txtBox.Text = num_2[num_2.Count - 1].ToString();
 
-            symbol = txtBox.Text;
+            }
+            else
+            {
+                symbol = "-";
 
+
+                //used to make correct calculation when you add and then press subtract 
+                if (contador > 1)
+                {
+                    num_2.Clear();
+                }
+            
+            }
             txtBox.Clear();
 
-            //used to make correct calculation when you add and then press subtract 
-            if (contador > 1)
-            {
-                numf_2.Clear();
-            }
         }
-        //------------------------------------------------ Multiple (*) --------------------------------//
+        //------------------------------------------------------ Multiple (*) --------------------------------//
 
         private void Button_Click_Multiple(object sender, RoutedEventArgs e)
         {
 
-            //Add number one to de List(numf_1) 
-            numf_1.Add(float.Parse(txtBox.Text));
+            if (symbol == "*")
+            {
+                //it shows the last number inserted into the List num_2
+                txtBox.Text = num_2[num_2.Count - 1].ToString();
 
-            txtBox.Text = "*";
+            }
+            else
+            {
 
-            symbol = txtBox.Text;
+                symbol = "*";
 
+
+                if (contador > 1)
+                {
+                    num_2.Clear();
+                }
+            }
             txtBox.Clear();
 
-            if (contador > 1)
+        }
+        //-------------------------------------------------------- Divide (/) --------------------------------//
+
+        private void Button_Click_Divide(object sender, RoutedEventArgs e)
+        {
+
+            if (symbol == "/")
             {
-                numf_2.Clear();
+
+                //it shows the last number inserted into the List num_2
+                txtBox.Text = num_2[num_2.Count - 1].ToString();
+
             }
+            else
+            {
+
+
+                symbol = "/";
+
+
+                if (contador > 1)
+                {
+                    num_2.Clear();
+                }
+            }
+            txtBox.Clear();
 
         }
+
+        //------------------------------------------------------------B_Average (%) --------------------------------//
 
         private void Button_Click_Average(object sender, RoutedEventArgs e)
         {
-            //Add number one to de List(numf_1) 
-            numf_1.Add(float.Parse(txtBox.Text));
 
-            txtBox.Text = "%";
+            if (symbol == "%")
+            {
 
-            symbol = txtBox.Text;
+                //it shows the last number inserted into the List num_2
+                txtBox.Text = num_2[num_2.Count - 1].ToString();
 
+            }
+            else
+            {
+
+
+                symbol = "%";
+
+
+
+                if (contador > 1)
+                {
+                    num_2.Clear();
+                }
+            }
             txtBox.Clear();
+
         }
 
 
-        //------------------------------------------------ B_Equal (=) --------------------------------//
+        //------------------------------------------------------------- B_Equal (=) --------------------------------//
 
 
         private void Button_Igual_1(object sender, RoutedEventArgs e)
         {
 
-            numf_2.Add(float.Parse(txtBox.Text));
+           
          
   
             while (symbol.Length > 0)
@@ -191,25 +515,25 @@ namespace _1.WPF.Intefaz
                 {
                     case "+":
                         
-                        //Console.WriteLine("Soy Contador : " + contador);
+                       
                         //When the result was displayed and + is pressed again to add another number;
                         if (contador > 1)
                         {
 
-                            txtBox.Text = (ResultF + numf_2.Sum()).ToString();
+                            txtBox.Text = (ResultF + num_2.Sum()).ToString();
 
                             symbol = "";
 
                             //Storing the last result
-                            ResultF = float.Parse(txtBox.Text);
+                            ResultF = double.Parse(txtBox.Text);
                         }
                         else
                         {
                            
-                            ResultF = (numf_1.Sum() + numf_2.Sum());
+                            ResultF = (num_1.Sum() + num_2.Sum());
                             txtBox.Text = ResultF.ToString();
                             symbol = "";
-                            numf_2.Clear();
+                            num_2.Clear();
                         }
                         
                         break;
@@ -220,10 +544,10 @@ namespace _1.WPF.Intefaz
                         {
                             
 
-                            txtBox.Text = (ResultF - numf_2.Sum()).ToString();
+                            txtBox.Text = (ResultF - num_2.Sum()).ToString();
                             
                             //Storing the next result 
-                            ResultF =float.Parse(txtBox.Text);
+                            ResultF =double.Parse(txtBox.Text);
 
                             symbol = "";
                         }
@@ -231,10 +555,10 @@ namespace _1.WPF.Intefaz
                         {
                             
 
-                            ResultF = (numf_1.Sum() - numf_2.Sum());
+                            ResultF = (num_1.Sum() - num_2.Sum());
                             txtBox.Text = ResultF.ToString();
                             symbol = "";
-                            numf_2.Clear();
+                            num_2.Clear();
                             Console.WriteLine("Soy el resultado Primera operacon  Restando: " + ResultF);
 
 
@@ -247,10 +571,10 @@ namespace _1.WPF.Intefaz
                         {
 
 
-                            txtBox.Text = (ResultF * numf_2.Sum()).ToString();
+                            txtBox.Text = (ResultF * num_2.Sum()).ToString();
 
                             //Storing the next result 
-                            ResultF = float.Parse(txtBox.Text);
+                            ResultF = double.Parse(txtBox.Text);
 
                             symbol = "";
                         }
@@ -258,11 +582,63 @@ namespace _1.WPF.Intefaz
                         {
 
 
-                            ResultF = (numf_1.Sum() * numf_2.Sum());
+                            ResultF = (num_1.Sum() * num_2.Sum());
                             txtBox.Text = ResultF.ToString();
                             symbol = "";
-                            numf_2.Clear();
+                            num_2.Clear();
                             
+
+                        }
+                        break;
+
+                    case "/":
+
+                        if (contador > 1)
+                        {
+
+
+                            txtBox.Text = (ResultF / num_2.Sum()).ToString();
+
+                            //Storing the next result 
+                            ResultF = double.Parse(txtBox.Text);
+
+                            symbol = "";
+                        }
+                        else
+                        {
+
+
+                            ResultF = (num_1.Sum() / num_2.Sum());
+                            txtBox.Text = ResultF.ToString();
+                            symbol = "";
+                            num_2.Clear();
+
+
+                        }
+                        break;
+
+                    case "%":
+
+                        if (contador > 1)
+                        {
+
+
+                            txtBox.Text = ((ResultF * num_2.Sum())/100).ToString();
+
+                            //Storing the next result 
+                            ResultF = double.Parse(txtBox.Text);
+
+                            symbol = "";
+                        }
+                        else
+                        {
+
+
+                            ResultF = ((num_1.Sum() / 100 ) * num_2.Sum());
+                            txtBox.Text = ResultF.ToString();
+                            symbol = "";
+                            num_2.Clear();
+
 
                         }
                         break;
@@ -277,20 +653,16 @@ namespace _1.WPF.Intefaz
 
    
 
-        //List for number 1
-        List<float> numf_1 = new List<float>();
-        //List for number 2
-        List<float> numf_2 = new List<float>();
+        //List to store number 1
+        List<double> num_1 = new List<double>();
+        //List to store number 2
+        List<double> num_2 = new List<double>();
 
         //Store the first calculation when buttton (=) is pressed
-        float ResultF;
+        double ResultF;
 
         //Used to run if  or else into the swich 
         int contador = 0;
-
-        //float number;
-  
-        //string igual = "=";
 
         //used to store the symbol entered
         string symbol = "";
