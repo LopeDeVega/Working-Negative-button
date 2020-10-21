@@ -72,7 +72,7 @@ namespace _1.WPF.Intefaz
             else
             {
                      txtBox.Text = txtBox.Text + 1;
-                    number_2 = (double.Parse(txtBox.Text));
+                     number_2 = (double.Parse(txtBox.Text));
 
             }
 
@@ -250,8 +250,13 @@ namespace _1.WPF.Intefaz
 
             }
         }
+        //-------------------------------------------------------------- B_Clean (C) ------------------------------------//
 
-      
+        private void Button_Click_Point(object sender, RoutedEventArgs e)
+        {
+
+        }
+
 
         //-------------------------------------------------------------- B_Clean (C) ------------------------------------//
         private void Button_Clean_1(object sender, RoutedEventArgs e)
@@ -261,8 +266,12 @@ namespace _1.WPF.Intefaz
             //Clean textbox
             txtBox.Clear();
 
+            //Set the variables to cero
             number_1 = 0;
             number_2 = 0;
+            //Delete all the numbers stored into the Lists
+            num_1.Clear();
+            num_2.Clear();
 
 
             //Set the values at Cero (0)
@@ -284,92 +293,118 @@ namespace _1.WPF.Intefaz
         }
 
         //---------------------------------------------------------------- B_Point (.) ------------------------------------//
-        private void Button_Click_Point(object sender, RoutedEventArgs e)
+        private void Button_Click_P(object sender, RoutedEventArgs e)
         {
 
             txtBox.Text = txtBox.Text + ".";
         }
 
-       
+        //---------------------------------------------------------------- B_Negative (+/-) ------------------------------------//
+
+        //private void Button_Click_Negative(object sender, RoutedEventArgs e)
+        //{
+
+        //    //When not number / turn the number in a negative value
+        //    if (txtBox.Text == "")
+        //    {
+
+        //        txtBox.Text = "-";
+
+
+        //    }
+        //    //When a number value is already inserted
+
+
+
+        //    if (txtBox.Text != "-" && symbol == "")
+        //    {
+        //        //Last number of list num_1 is multiplied for (-1) converting the value in a negative number
+        //        num_1[num_1.Count - 1] = num_1[num_1.Count - 1] * (-1);
+        //        txtBox.Text = num_1[num_1.Count - 1].ToString();
+
+        //    }
+        //    if (txtBox.Text != "" && symbol != "")
+        //    {
+
+
+
+        //        //Last number of list num_2 is multiplied for (-1) converting the value in a negative number
+        //        num_2[num_2.Count - 1] = num_2[num_2.Count - 1] * (-1);
+        //        txtBox.Text = num_2[num_2.Count - 1].ToString();
+
+        //    }
+
+        //    if (ResultF != 0)
+        //    {
+
+        //        txtBox.Text = (ResultF * -1).ToString();
+        //        ResultF = double.Parse(txtBox.Text);
+        //        Console.WriteLine("Reultado conseguido");
+        //        Console.WriteLine(ResultF);
+        //    }
+
+        //}
+
+
+
 
 
         //----------------------------------------------------- Add (+)--------------------------------//
         private void Button_Click_Add(object sender, RoutedEventArgs e)
         {
-            ////if which prevent to break the app if + symbol is pressed before any number inserted
-            //if (symbol == "+" )
-            //{
-            //    //it shows the last number inserted into the List num_2
-            //    txtBox.Text = num_2[num_2.Count - 1].ToString();
-
-
-            //}
-            ////when symbol is empty add the symbol 
-            //else
-            //{
-            //    //Add number one to de List(num_1) 
-            //    //num_1.Add(double.Parse(txtBox.Text));
-
-            //    //TextBox get the value +
-            //    //txtBox.Text = "+";
-
-            //    //symbol is = +
-            //    symbol = "+";
-
-
-
-            //    //used to make correct calculation when you are adding and then press subtract 
-            //    if (contador > 1)
-            //    {
-            //        num_2.Clear();
-            //    }
-
-            //}
-            //txtBox.Clear();
-
+            //Adding the symbol and adding the number to the list
             if(symbol == "")
             {
-                //num_1.Add(double.Parse(txtBox.Text));
                 symbol = "+";
-                counter = 1;
+               // counter = 1;
+                
+                num_1.Add(number_1);
 
             }
+          
+            //Adding more than two numbers without press igual 
             else
             {
-
-               // num_2.Add(double.Parse(txtBox.Text));
-
-
+ 
+                num_1.Add(number_2);
+              
             }
 
             //num_1.Add(double.Parse(txtBox.Text));
             //symbol = "+";
             txtBox.Clear();
-            Console.WriteLine("Soy numero _ 1 la primera vez " + number_1);
         }
         //------------------------------------------------ ---Subtract (-) --------------------------------//
 
         private void Button_Click_Subtract(object sender, RoutedEventArgs e)
         {
-            if (symbol == "-")
-            {
-
-                //it shows the last number inserted into the List num_2
-                txtBox.Text = num_2[num_2.Count - 1].ToString();
-
-            }
-            else
+            if (symbol == "")
             {
                 symbol = "-";
+                // counter = 1;
 
+                num_1.Add(number_1);
 
-                //used to make correct calculation when you add and then press subtract 
-                if (contador > 1)
-                {
-                    num_2.Clear();
-                }
-            
             }
+            //Adding more than two numbers without press igual 
+            else
+            {
+
+                num_1.Add(number_2);
+
+            }
+            //else
+            //{
+            //    symbol = "-";
+
+
+            //    //used to make correct calculation when you add and then press subtract 
+            //    if (contador > 1)
+            //    {
+            //        num_2.Clear();
+            //    }
+            
+            //}
             txtBox.Clear();
 
         }
@@ -473,29 +508,30 @@ namespace _1.WPF.Intefaz
                 switch (symbol)
                 {
                     case "+":
-                        
                        
                         //After display firt result / Continue adding
                         //Contador is more than one / already a calculation was made
                         if (contador > 1)
                         {
-                            //show the operation result
+                            
+                           // Sum the Result 
                             txtBox.Text = (ResultF + number_2).ToString();
                             //store the result
                             ResultF = double.Parse(txtBox.Text);
-
                             symbol = "";
-
                             
                         }
                         else
                         {
-                            
-                            //ResultF = (num_1.Sum() + num_2.Sum());
-                            ResultF = number_1 + number_2;
+                         
+                            //First Sum 
+                            //Add the two numbers / store into Result / Display the Result
+                            ResultF = (num_1.Sum() + number_2);
                             txtBox.Text = ResultF.ToString();
+                            //Clear Symbol in case a different symbol is pressed /not break the App
                             symbol = "";
-                            //num_2.Clear();
+                            num_1.Clear();
+                            
                         }
                         
                         break;
@@ -504,24 +540,26 @@ namespace _1.WPF.Intefaz
 
                         if (contador > 1)
                         {
-                            
 
-                            txtBox.Text = (ResultF - num_2.Sum()).ToString();
-                            
-                            //Storing the next result 
-                            ResultF =double.Parse(txtBox.Text);
 
+
+                            // Subtract the Result //Result and the number 2
+                            txtBox.Text = (ResultF - number_2).ToString();
+                            //store the result
+                            ResultF = double.Parse(txtBox.Text);
                             symbol = "";
                         }
                         else
                         {
-                            
 
-                            ResultF = (num_1.Sum() - num_2.Sum());
+
+                            //First Sum 
+                            //Add the two numbers / store into Result / Display the Result
+                            ResultF = (num_1.Sum() -  number_2);
                             txtBox.Text = ResultF.ToString();
+                            //Clear Symbol in case a different symbol is pressed /not break the App
                             symbol = "";
-                            num_2.Clear();
-                            Console.WriteLine("Soy el resultado Primera operacon  Restando: " + ResultF);
+                            num_1.Clear();
 
 
                         }
@@ -631,53 +669,9 @@ namespace _1.WPF.Intefaz
         //used to store the symbol entered
         string symbol = "";
 
-      
-
-        //---------------------------------------------------------------- B_Negative (+/-) ------------------------------------//
-
-        //private void Button_Click_Negative(object sender, RoutedEventArgs e)
-        //{
-
-        //    //When not number / turn the number in a negative value
-        //    if (txtBox.Text == "")
-        //    {
-
-        //        txtBox.Text = "-";
-
-
-        //    }
-        //    //When a number value is already inserted
 
 
 
-        //    if (txtBox.Text != "-" && symbol == "")
-        //    {
-        //        //Last number of list num_1 is multiplied for (-1) converting the value in a negative number
-        //        num_1[num_1.Count - 1] = num_1[num_1.Count - 1] * (-1);
-        //        txtBox.Text = num_1[num_1.Count - 1].ToString();
-
-        //    }
-        //    if (txtBox.Text != "" && symbol != "")
-        //    {
-
-
-
-        //        //Last number of list num_2 is multiplied for (-1) converting the value in a negative number
-        //        num_2[num_2.Count - 1] = num_2[num_2.Count - 1] * (-1);
-        //        txtBox.Text = num_2[num_2.Count - 1].ToString();
-
-        //    }
-
-        //    if (ResultF != 0)
-        //    {
-
-        //        txtBox.Text = (ResultF * -1).ToString();
-        //        ResultF = double.Parse(txtBox.Text);
-        //        Console.WriteLine("Reultado conseguido");
-        //        Console.WriteLine(ResultF);
-        //    }
-
-        //}
 
 
     }
