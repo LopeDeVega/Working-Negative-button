@@ -316,12 +316,12 @@ namespace _1.WPF.Intefaz
                 txtBox.Text = number_1.ToString();
 
             }
-            if(txtBox.Text != "" && ResultF !=0 )
-            {
+            //if(txtBox.Text != "" && ResultF !=0 )
+            //{
 
-                ResultF = (ResultF * -1);
-                txtBox.Text = ResultF.ToString();
-            }
+            //    ResultF = (ResultF * -1);
+            //    txtBox.Text = ResultF.ToString();
+            //}
 
 
 
