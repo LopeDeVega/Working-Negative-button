@@ -89,7 +89,7 @@
             
             <Button Grid.Column="1" Grid.Row="5" FontSize="50" Background="BlanchedAlmond" Click="Button_Click_P">.</Button>
 
-            <Button Grid.Column="0" Grid.Row="5" FontSize="50" Background="BlanchedAlmond" Click="Button_Click_Negative">+/-</Button>
+            <Button Grid.Column="0" Grid.Row="5" FontSize="40" Background="BlanchedAlmond" Click="Button_Click_Negative">+/-</Button>
 
 
         </Grid>
